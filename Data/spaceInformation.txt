@@ -1,0 +1,52 @@
+O Start
+P 60 50 2 10 30 90 160 250 750 0 Mediterranean Avenue
+C Community Chest
+P 60 50 4 20 60 180 320 450 950 0 Baltic Avenue
+P 80 50 5 30 80 240 360 450 950 0 Artcitc Avenue
+T Income Tax
+R Reading Railroad
+P 100 50 6 30 90 270 400 550 1050 1 Massachusetts Avenue
+P 100 50 6 30 90 270 400 550 1050 1 Oriental Avenue
+Ch Chance
+U Gas Company
+P 100 50 6 30 90 270 400 550 1050 1 Vermont Avenue
+P 120 50 8 40 100 300 450 600 1100 1 Connecticut Avenue
+O Jail
+A Auction any unowned property
+P 140 100 10 50 150 450 625 750 1250 2 Maryland Avenue
+P 140 100 10 50 150 450 625 750 1250 2 st. Charles Place
+U Electric Company
+P 140 100 10 50 150 450 625 750 1250 2 States Avenue
+P 160 100 12 60 180 500 700 900 1400 2 Virginia Avenue
+R Pennsylvania Railroad
+P 180 100 14 70 200 550 750 950 1450 3 St. James Place
+C Community Chest
+P 180 100 14 70 200 550 750 950 1450 3 Tennessee Avenue
+P 200 100 15 80 220 600 800 1000 1500 3 New York Avenue
+P 200 100 15 80 220 600 800 1000 1500 3 New Jersey Avenue
+O Free Parking
+P 220 150 18 90 250 700 875 1050 2050 4 Kentucky Avenue
+Ch Chance
+P 220 150 18 90 250 700 875 1050 2050 4 Indiana Avenue
+P 240 150 20 100 300 750 925 1100 2100 4 Illinois Avenue
+P 240 150 20 100 300 750 925 1100 2100 4 Michigan Avenue
+B Bus Ticket
+R B&O Railroad
+P 260 150 22 110 330 800 975 1150 2150 5 Atlantic Avenue
+P 260 150 22 110 330 800 975 1150 2150 5 Ventnor Avenue
+U WaterWorks
+P 280 150 24 120 360 850 1025 1200 2200 5 Marvin Gardens
+P 280 150 24 120 360 850 1025 1200 2200 5 Califirnia Avenue
+J Go to Jail
+P 300 200 26 130 390 900 1100 1275 2275 6 Pacific Avenue
+P 300 200 26 130 390 900 1100 1275 2275 6 South Carolina Avenue
+P 300 200 26 130 390 900 1100 1275 2275 6 North Carolina Avenue
+C Community Chest
+P 320 200 28 150 450 1000 1200 1400 2400 6 Pennsylvania Avenue
+R Short Line Railroad
+Ch Chance
+B Birthday gift take $100 or a Bus Ticket
+P 350 200 35 175 500 1100 1300 1500 2500 7 Florida Avenue
+P 350 200 35 175 500 1100 1300 1500 2500 7 Park Place
+T Luxury Tax
+P 400 200 50 200 600 1400 1700 2000 3000 7 Boardwalk

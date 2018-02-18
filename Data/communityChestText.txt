@@ -1,0 +1,17 @@
+7 0 Advance to Go (Collect $200)
+6 200 Bank error in your favor – Collect $200
+6 -50 Doctor's fees – Pay $50
+6 50 From sale of stock you get $50
+1 0 Get Out of Jail Free – This card may be kept until needed or sold
+0 0 Go directly to jail – Do not pass Go – Do not collect $200
+5 50 Grand Opera Night – Collect $50 from every player for opening night seats
+6 100 Holiday Fund matures - Receive $100
+6 20 Income tax refund – Collect $20 
+5 10 It is your birthday - Collect $10 from each player
+6 100 Life insurance matures – Collect $100
+6 -100 Pay hospital fees of $100
+6 -150 Pay school fees of $150
+6 25 Receive $25 consultancy fee 
+4 40 You are assessed for street repairs – $40 per house – $115 per hotel
+6 10 You have won second prize in a beauty contest – Collect $10 
+6 100 You inherit $100
