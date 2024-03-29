@@ -19,16 +19,15 @@ jobs:
     - name: Checkout code
       uses: actions/checkout@v2
 
-    - name: Install dependencies
+    - name: Install QtCI scripts
       run: |
-        sudo apt-get update
-        sudo apt-get install -y wget
+        wget https://raw.githubusercontent.com/benlau/qtci/master/recipes/install-qt
+        wget https://raw.githubusercontent.com/benlau/qtci/master/bin/extract-qt-installer
+        chmod +x install-qt extract-qt-installer
 
-    - name: Download and install Qt
+    - name: Install Qt
       run: |
-        wget https://download.qt.io/official_releases/online_installers/qt-unified-linux-x64-online.run
-        chmod +x qt-unified-linux-x64-online.run
-        ./qt-unified-linux-x64-online.run --platform minimal --script tools/qt-installer-noninteractive.qs
+        ./install-qt 5.15.1
 
     - name: Configure and build
       run: |
