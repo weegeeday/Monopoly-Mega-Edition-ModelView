@@ -1,0 +1,38 @@
+name: Build
+
+on:
+  push:
+    branches:
+      - main  # Change this to your main branch name
+  pull_request:
+    branches:
+      - main  # Change this to your main branch name
+  workflow_dispatch:  # Manual trigger
+    branches:
+      - main  # Change this to your main branch name
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+
+    - name: Set up Qt
+      uses: jurplel/setup-qt@v1
+      with:
+        version: '5.15.2'  # Change this to your Qt version
+
+    - name: Configure and build
+      run: |
+        mkdir build
+        cd build
+        qmake ..
+        make
+
+    - name: Upload artifacts
+      uses: actions/upload-artifact@v2
+      with:
+        name: binaries
+        path: build/  # Change this to the directory containing your built binaries
