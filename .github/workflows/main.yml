@@ -3,13 +3,13 @@ name: Build
 on:
   push:
     branches:
-      - master  # Change this to your main branch name
+      - master
   pull_request:
     branches:
-      - master  # Change this to your main branch name
-  workflow_dispatch:  # Manual trigger
+      - master
+  workflow_dispatch:
     branches:
-      - master  # Change this to your main branch name
+      - master
 
 jobs:
   build:
@@ -19,10 +19,14 @@ jobs:
     - name: Checkout code
       uses: actions/checkout@v2
 
-    - name: Install Qt dependencies
+    - name: Install Qt
       run: |
         sudo apt-get update
-        sudo apt-get install qt5-default
+        sudo apt-get install -y wget
+        wget https://download.qt.io/official_releases/online_installers/qt-unified-linux-x64-online.run
+        chmod +x qt-unified-linux-x64-online.run
+        echo "Installing Qt..."
+        ./qt-unified-linux-x64-online.run --script tools/qt-installer-noninteractive.qs
 
     - name: Configure and build
       run: |
@@ -35,4 +39,4 @@ jobs:
       uses: actions/upload-artifact@v2
       with:
         name: binaries
-        path: build/  # Change this to the directory containing your built binaries
+        path: build/
