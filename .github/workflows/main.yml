@@ -3,13 +3,13 @@ name: Build
 on:
   push:
     branches:
-      - main  # Change this to your main branch name
+      - master  # Change this to your main branch name
   pull_request:
     branches:
-      - main  # Change this to your main branch name
+      - master  # Change this to your main branch name
   workflow_dispatch:  # Manual trigger
     branches:
-      - main  # Change this to your main branch name
+      - master  # Change this to your main branch name
 
 jobs:
   build:
@@ -19,10 +19,10 @@ jobs:
     - name: Checkout code
       uses: actions/checkout@v2
 
-    - name: Set up Qt
-      uses: jurplel/setup-qt@v1
-      with:
-        version: '5.15.2'  # Change this to your Qt version
+    - name: Install Qt dependencies
+      run: |
+        sudo apt-get update
+        sudo apt-get install qt5-default
 
     - name: Configure and build
       run: |
