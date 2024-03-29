@@ -26,13 +26,13 @@ jobs:
 
     - name: Download Qt offline installer
       run: |
-        wget https://download.qt.io/archive/qt/5.15/5.15.2/qt-opensource-linux-x64-5.15.2.run
-        chmod +x qt-opensource-linux-x64-5.15.2.run
+        wget https://download.qt.io/archive/qt/5.15/5.15.1/qt-opensource-linux-x64-5.15.1.run
+        chmod +x qt-opensource-linux-x64-5.15.1.run
 
     - name: Install Qt
       run: |
         echo "Installing Qt..."
-        ./qt-opensource-linux-x64-5.15.2.run --script tools/qt-installer-noninteractive.qs
+        ./qt-opensource-linux-x64-5.15.1.run --script tools/qt-installer-noninteractive.qs
 
     - name: Configure and build
       run: |
