@@ -19,21 +19,20 @@ jobs:
     - name: Checkout code
       uses: actions/checkout@v2
 
-    - name: Set up environment
-      run: |
-        export QT_QPA_PLATFORM=xcb
-
     - name: Install dependencies
       run: |
         sudo apt-get update
-        sudo apt-get install -y wget libxkbcommon-x11-0 libxcb-icccm4 libxcb-image0 libxcb-keysyms1 libxcb-render-util0 libxcb-shape0
+        sudo apt-get install -y wget
+
+    - name: Download Qt offline installer
+      run: |
+        wget https://download.qt.io/archive/qt/5.15/5.15.2/qt-opensource-linux-x64-5.15.2.run
+        chmod +x qt-opensource-linux-x64-5.15.2.run
 
     - name: Install Qt
       run: |
-        wget https://download.qt.io/official_releases/online_installers/qt-unified-linux-x64-online.run
-        chmod +x qt-unified-linux-x64-online.run
         echo "Installing Qt..."
-        ./qt-unified-linux-x64-online.run --script tools/qt-installer-noninteractive.qs
+        ./qt-opensource-linux-x64-5.15.2.run --script tools/qt-installer-noninteractive.qs
 
     - name: Configure and build
       run: |
