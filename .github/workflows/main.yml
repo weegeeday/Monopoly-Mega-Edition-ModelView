@@ -22,19 +22,13 @@ jobs:
     - name: Install dependencies
       run: |
         sudo apt-get update
-        sudo apt-get install -y build-essential perl python3 git
+        sudo apt-get install -y wget
 
-    - name: Download Qt source package
+    - name: Download and install Qt
       run: |
-        wget https://download.qt.io/archive/qt/5.15/5.15.1/single/qt-everywhere-src-5.15.1.tar.xz
-        tar -xf qt-everywhere-src-5.15.1.tar.xz
-
-    - name: Build and install Qt
-      run: |
-        cd qt-everywhere-src-5.15.1
-        ./configure -opensource -confirm-license -release -nomake examples -nomake tests
-        make -j$(nproc)
-        sudo make install
+        wget https://download.qt.io/official_releases/online_installers/qt-unified-linux-x64-online.run
+        chmod +x qt-unified-linux-x64-online.run
+        ./qt-unified-linux-x64-online.run --platform minimal --script tools/qt-installer-noninteractive.qs
 
     - name: Configure and build
       run: |
